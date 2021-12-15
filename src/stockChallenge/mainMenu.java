@@ -3,7 +3,7 @@ package stockChallenge;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class mainMenu{
+public class mainMenu {
 
     adminStock stock = new adminStock();
 
@@ -41,21 +41,19 @@ public class mainMenu{
     }
 
     private void viewStocks() {
-        Scanner myScanner = new Scanner(System.in);
-        System.out.println("Please enter your password to view stock.");
-        String password = myScanner.nextLine();
-        ArrayList<stock> stocks = stock.getStocks(password);
-        if (stocks != null) {
-            for (stock i : stocks) {
-                System.out.println("ID: " + i.productID + ", Manufacturer: " + i.itemMan + ", Name: " + i.itemName + ", Price: " + i.itemPrice + ", Stock: " + i.itemAmount);
-            }
-        } else
-            System.out.println("Incorrect Password.");
-    }
+//        Scanner myScanner = new Scanner(System.in);
+//        System.out.println("Please enter your password to view stock.");
+//        String password = myScanner.nextLine();
+//        ArrayList<stock> stocks = stock.getStocks(password);
+//        if (stocks != null) {
+        for (stock s : stocks) {
+            System.out.println("ID: " + s.productID + ", Manufacturer: " + s.itemMan + ", Name: " + s.itemName + ", Price: " + s.itemPrice + ", Stock: " + s.itemAmount);
+        }
 
-    private void updateStocks(){
-    }
+        private void updateStocks () {
+        }
 
-    private void removeStocks(){
+        private void removeStocks () {
+        }
     }
 }

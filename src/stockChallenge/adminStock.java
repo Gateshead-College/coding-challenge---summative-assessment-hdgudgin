@@ -22,6 +22,8 @@ public class adminStock {
         stockList.add("Pepperoni Pizza");
     }
 
+
+
     public void addStock(stock i) {
         if (stockList.contains(i.itemName)) {
             this.stocks.add(i);
